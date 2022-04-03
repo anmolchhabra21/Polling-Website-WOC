@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSign</title>
+    <link rel="stylesheet" href="1SignUpWOC.css">
+</head>
+
+<body>
+    <section>
+        <div class="imgBx">
+            <img src="https://res.cloudinary.com/dshtxwfwj/image/upload/v1648306669/ProjectWOC_ppx8rn.jpg">
+        </div>
+        <div class="contentBx">
+            <div class="formBx">
+                <!-- <img src="Graph.jpg" class="GraphPhoto"> -->
+                <h2>Sign Up</h2>
+                <form id="form">
+                    <div class="inputBx">
+                        <span>First Name</span>
+                        <input type="text" id="FName" placeholder="Write your First Name here">
+                    </div>
+                    <div class="inputBx" >
+                        <span>Last Name</span>
+                        <input type="Text" id="LName" placeholder="Write your Last Name here">
+                    </div>
+                    <div class="inputBx">
+                        <span>Email</span>
+                        <input type="Email" id="Email" placeholder="Write your Email here">
+                    </div>
+                    <div class="inputBx">
+                        <span>Number</span>
+                        <input type="number" id="Nmbr" placeholder="Write your Number here">
+                    </div>
+                    <div class="inputBx">
+                        <span>Password</span>
+                        <input type="password" id="Pswd" placeholder="Write your Password here">
+                    </div>
+                    <div class="inputBx">
+                        <input id="SighUp" type="submit" value="Sign Up">
+                    </div>
+                    <div class="inputBx">
+                        <p>Already have an account? <a href="2SignInWOC.html">Sign In</a></p>
+                    </div>
+                </form>
+
+                <h3>Login with Social Media</h3>
+                <ul class="sci" style="list-style:none">
+                    <li class="fb">Facebook &nbsp;</li>
+                    <li class="tw">Twitter &nbsp; </li>
+                    <li class="ia">Instagram &nbsp;</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script> -->
+    <script type="module">
+         // Import the functions you need from the SDKs you need
+ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
+ import { getDatabase } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js";
+ import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
+ // TODO: Add SDKs for Firebase products that you want to use
+ // https://firebase.google.com/docs/web/setup#available-libraries
+
+ // Your web app's Firebase configuration
+ const firebaseConfig = {
+   apiKey: "AIzaSyBsaTnuNS-A-H30Sd-oz6M0D7qSjyFoYfI",
+   authDomain: "pollingwebsite-a8305.firebaseapp.com",
+   databaseURL: "https://pollingwebsite-a8305-default-rtdb.firebaseio.com",
+   projectId: "pollingwebsite-a8305",
+   storageBucket: "pollingwebsite-a8305.appspot.com",
+   messagingSenderId: "1036692593631",
+   appId: "1:1036692593631:web:ed939e8e54bc2a15b1426a"
+ };
+
+ // Initialize Firebase
+ const app = initializeApp(firebaseConfig);
+ const database = getDatabase(app);
+ const auth = getAuth();
+
+ SighUp.addEventListener('click',(e)=>{
+
+      var Fnm= getElementById('FName').value;
+      var Lnm= getElementById('LName').value;
+      var email = getElementById('Email').value;
+      var Nbr = getElementById('Nmbr').value;
+      var password = getElementById('Pswd').value;
+
+      console.log(Fnm,Lnm,email,Nbr,password);
+      alert("first part done");
+
+    // createUserWithEmailAndPassword(auth, email, password)
+    // .then((userCredential) => {
+    //   // Signed in 
+    //   const user = userCredential.user;
+    //   alert('user created!');
+    //   // ...
+    // })
+    // .catch((error) => {
+    //   const errorCode = error.code;
+    //   const errorMessage = error.message;
+    //   alert(errorMessage);
+    //   // ..
+    // });
+ })
+    </script>
+</body>
+
+</html>
