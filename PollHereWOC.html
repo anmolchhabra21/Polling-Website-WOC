@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poll Here</title>
+    <style>
+        input{
+            width: 80%;
+            height: 25px;
+            border-radius: 10px;
+        }
+        button{
+            width: auto;
+            height: 25px;
+            border-radius: 10px;
+            transition: 300ms ease-in-out;
+        }
+        button:hover{
+            background-color: #094697;
+            color: white;
+            transform: translateX(4px);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body style="background-image: linear-gradient(to right, rgb(2, 6, 56), #203045);margin: 0px">
+    <div class="contentBx" style=" width: 70%; margin:auto;">
+        <div class="formBx" style="background-image:linear-gradient(135deg,rgb(44, 135, 233),#82b1ff) ; padding: 1rem; border-radius: 2rem; margin-top: 1.5rem; ">
+
+            <h2 style=" width: 100%; text-align: center;font-size: 2.5rem; border-bottom: 10px rgb(0, 174, 255) solid;margin-bottom: 0rem;">CREATE POLL</h2>
+            <form id="form" style="font-size: 1.7rem;padding: 2rem 2rem 0rem 2rem;">
+                <div class="inputBx" style="margin:20px 0px">
+                    <span style="color: black; display: block;">Question:</span>
+                    <input type="text" style="width: 100%;" placeholder="Write the Question here">
+                </div>
+
+                <div class="inputBx" style="margin:20px 0px">
+                    <span style="color: black; display: block;">Option 1</span>
+                    <input type="Text" placeholder="Write 1st Option here">
+                    <span><button>Choose This</button></span>
+                </div>
+                
+                <div class="inputBx" style="margin:20px 0px">
+                    <span style="color: black; display: block;">Option 2</span>
+                    <input type="text" placeholder="Write 2nd Option here">
+                    <span><button>Choose This</button></span>
+                </div>
+                
+                <div class="inputBx" style="margin:20px 0px">
+                    <span style="color: black; display: block;">Option 3</span>
+                    <input type="text" placeholder="Write 3rd Option here">
+                    <span><button>Choose This</button></span>
+                </div>
+
+                <div class="inputBx" style="margin:20px 0px">
+                    <span style="color: black; display: block;">Option 4</span>
+                    <input type="text" placeholder="Write 4th Option here">
+                    <span><button>Choose This</button></span>
+                </div>
+
+                <!-- <div class="inputBx">
+                    <input id="SighUp" type="submit" value="Sign Up">
+                </div> -->
+
+                <div class="inputBx">
+                    <p style="font-size: large;text-align: center;">Share This Code... <button onclick="copy()">Copy link</button></p>
+                </div>
+
+            </div>
+        </div>
+    </div>   
+    <br>
+    <br>
+    <br>
+    <br>
+    
+</body>
+<div style=" background-color: blue;  left: 0px; bottom: 0px; width: 100%;">
+    <div id="CnA" style="justify-content: center; display: flex; color: white;">
+      <h3 style="padding: 1.2rem; font-size: 1.8rem; margin: 0px;">
+        <a href="AboutWOC.html" style="text-decoration: none; color: white;">About Us</a>
+      </h3>
+      
+      <h3 style="padding:1.2rem; font-size: 1.8rem;  margin: 0px;">
+        <a href="ContactusWOC.html" style="text-decoration: none; color: white;">Contact Us</a>
+      </h3>
+      <h3  style="padding: 1.2rem; font-size: 1.8rem;  margin: 0px;">
+        <a style="text-decoration: none; color: white;" href="WelcomeWOC.html">Home</a>
+      </h3>
+    </div>
+    <div style="padding-left: 2rem; width: 45rem; justify-content: center; color: white; font-size: 1.1rem;">
+      SurveyMonkey is brought to you by momentive.ai. Shape what's next with AI‑driven insights and experience management solutions built for the pace of modern business.
+      <br>
+      Copyright © 1999-2022 Momentive
+    </div>
+</div>         
+<script>
+    function copy(){
+        let url = document.location.href;
+
+        navigator.clipboard.writeText(url).then(function() {
+            alert('This Url Was Copied on your Clipboard, Now you can share this with Everyone!!');
+        }, function() {
+            console.log('Copy error')
+        });
+    }
+</script>
+</html>

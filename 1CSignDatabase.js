@@ -52,6 +52,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
 import { getDatabase } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js";
 import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js"
+// import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -68,16 +69,25 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+console.log(app);
 const database = getDatabase(app);
+
 const auth = getAuth();
 
-SighUp.addEventListener('click',(e)=>{
+try {
+  let SighUp = document.getElementById("SighUp");
+console.log(SighUp);
+
+
+SighUp.addEventListener('click',(event)=>{
+
+  event.preventDefault();
 
   var email = document.getElementById('Email').value;
-  var FName = document.getElementById('FName').value;
-  var Nmbr = document.getElementById('Nmbr').value;
+  // var FName = document.getElementById('FName').value;
+  // var Nmbr = document.getElementById('Nmbr').value;
   var password = document.getElementById('Pswd').value;
-  alert('THis much runned!!');
+  // alert('THis much runned!!');
   // this much is also not running Sir
 
   createUserWithEmailAndPassword(auth, email, password)
@@ -93,5 +103,24 @@ SighUp.addEventListener('click',(e)=>{
     // ..
     alert(errorMessage);
   });
+  document.getElementById('form').reset();
 
 });
+} catch (error) {
+  console.log(error);
+}
+
+
+
+// let SighIn = document.getElementById("SighIn");
+// alert("done!");
+// // console.log("this is me");
+// SighIn.addEventListener('click',(event)=>{
+//   event.preventDefault();
+
+//   var username = getElementById("usernm");
+//   var password = getElementById("passwd");
+//   alert("This is working!!");
+//   console.log(username, password);
+
+// })
