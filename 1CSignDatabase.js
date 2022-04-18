@@ -95,7 +95,8 @@ SighUp.addEventListener('click',(event)=>{
     // Signed in 
     const user = userCredential.user;
     // ...
-    alert('User Created!!');
+    alert('User Created with email' + email);
+    location.href = "./WelcomeWOC.html";
   })
   .catch((error) => {
     const errorCode = error.code;

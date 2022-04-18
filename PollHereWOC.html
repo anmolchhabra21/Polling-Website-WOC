@@ -20,7 +20,7 @@
         button:hover{
             background-color: #094697;
             color: white;
-            transform: translateX(4px);
+            transform: translate(4px,-4px);
             cursor: pointer;
         }
     </style>
@@ -39,25 +39,25 @@
                 <div class="inputBx" style="margin:20px 0px">
                     <span style="color: black; display: block;">Option 1</span>
                     <input type="Text" placeholder="Write 1st Option here">
-                    <span><button>Choose This</button></span>
+                    <span><button type="button" onclick="clicked()">Choose This</button></span>
                 </div>
                 
                 <div class="inputBx" style="margin:20px 0px">
                     <span style="color: black; display: block;">Option 2</span>
                     <input type="text" placeholder="Write 2nd Option here">
-                    <span><button>Choose This</button></span>
+                    <span><button type="button" onclick="clicked()">Choose This</button></span>
                 </div>
                 
                 <div class="inputBx" style="margin:20px 0px">
                     <span style="color: black; display: block;">Option 3</span>
                     <input type="text" placeholder="Write 3rd Option here">
-                    <span><button>Choose This</button></span>
+                    <span><button type="button" onclick="clicked()">Choose This</button></span>
                 </div>
 
                 <div class="inputBx" style="margin:20px 0px">
                     <span style="color: black; display: block;">Option 4</span>
                     <input type="text" placeholder="Write 4th Option here">
-                    <span><button>Choose This</button></span>
+                    <span><button type="button" onclick="clicked()">Choose This</button></span>
                 </div>
 
                 <!-- <div class="inputBx">
@@ -65,7 +65,7 @@
                 </div> -->
 
                 <div class="inputBx">
-                    <p style="font-size: large;text-align: center;">Share This Code... <button onclick="copy()">Copy link</button></p>
+                    <p style="font-size: large;text-align: center;">Share This Poll... <button onclick="copy()">Copy link</button></p>
                 </div>
 
             </div>
@@ -105,6 +105,11 @@
         }, function() {
             console.log('Copy error')
         });
+    }
+
+    function clicked(){
+        location.href= "./PollResults.html";
+        
     }
 </script>
 </html>
