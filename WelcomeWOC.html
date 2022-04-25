@@ -35,9 +35,10 @@
         <li><a style="text-decoration: none;" href="#CnA">Contact</a></li>
         <li><a style="text-decoration: none;" href="#CnA">About</a></li>
       </ul>
-      <div style="display: flex; align-items:center;gap:2rem;">
+      <div style="display: flex; align-items:center;gap:1rem;">
         <a style="text-decoration: none;" href="1SignUpFbseWOC.html">Sign Up</a>
         <a style="text-decoration: none;" href="2SignInWOC.html">Registered</a>
+        <a style="text-decoration: none; color:#0d6efd; cursor: pointer;" id="logout" onclick="signOut()">Log Out</a>
         <a style="text-decoration: none;" href="PollHereWOC.html">Create a Poll</a>
       </div>
     </div>
@@ -60,7 +61,7 @@
         ">
       This is a Polling Website for Polling!!
     </p>
-    <img src="FigGraphStart.png" style="width: 100%; height: 100%; position: relative" />
+    <img src="https://res.cloudinary.com/dshtxwfwj/image/upload/v1650909864/FigGraphStart_kqyznt.png" style="width: 100%; height: 100%; position: relative" />
   </div>
 
   <!-- <div class="accordion" id="accordionExample">
@@ -168,7 +169,7 @@
         website. StrawPoll.vote is run as a public service with no expectation of making money.
       </p>
     </div>
-    <img src="Mentimeter_Applications_Web_Live-Polling_HeroImage_2021__1_.png" width="50%" height="70%">
+    <img src="https://res.cloudinary.com/dshtxwfwj/image/upload/v1650909877/Mentimeter_Applications_Web_Live-Polling_HeroImage_2021__1__dbutel.png" width="50%" height="70%">
   </div>
 
   <h1 id="Cntnt"
@@ -233,7 +234,39 @@
       Copyright © 1999-2022 Momentive
     </div>
   </div>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<!-- <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-analytics.js"></script> -->
+<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
+<!-- <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js"></script> -->
+<!-- <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-storage.js"></script> -->
 
+
+
+<script type="module">
+   // Import the functions you need from the SDKs you need
+  //  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
+  // import { getAuth, signOut } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+  const firebaseConfig = {
+    apiKey: "AIzaSyBsaTnuNS-A-H30Sd-oz6M0D7qSjyFoYfI",
+    authDomain: "pollingwebsite-a8305.firebaseapp.com",
+    databaseURL: "https://pollingwebsite-a8305-default-rtdb.firebaseio.com",
+    projectId: "pollingwebsite-a8305",
+    storageBucket: "pollingwebsite-a8305.appspot.com",
+    messagingSenderId: "1036692593631",
+    appId: "1:1036692593631:web:ed939e8e54bc2a15b1426a"
+  };
+
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.auth();
+  
+</script>
+<script src="welcomeWOC.js"></script>
 
 
 </body>

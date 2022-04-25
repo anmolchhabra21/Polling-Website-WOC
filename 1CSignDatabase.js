@@ -51,7 +51,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
 import { getDatabase } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js";
-import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js"
+import { getAuth, createUserWithEmailAndPassword,signOut } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js"
 // import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -95,7 +95,7 @@ SighUp.addEventListener('click',(event)=>{
     // Signed in 
     const user = userCredential.user;
     // ...
-    alert('User Created with email' + email);
+    alert('User Created with email ' + email);
     location.href = "./WelcomeWOC.html";
   })
   .catch((error) => {

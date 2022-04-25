@@ -59,3 +59,64 @@ function copy(){
         perct4();
         
     }
+
+    // var optn1 = document.getElementById('optn1').innerHTML;
+    // console.log("the value of option 1 is"+optn1);
+    
+    // var optn2 = document.getElementById('optn2').innerHTML;
+    // var optn3 = document.getElementById('optn3').innerHTML;
+    // var optn4 = document.getElementById('optn4').innerHTML;
+    
+    // var perc1 = document.getElementById('perc1').innerHTML;
+    // var perc2 = document.getElementById('perc2').innerHTML;
+    // var perc3 = document.getElementById('perc3').innerHTML;
+    // var perc4 = document.getElementById('perc4').innerHTML;
+    
+    // var ques = document.getElementById('ques').innerHTML;
+
+
+    
+    // function writeUserData(userId, name, email, imageUrl) {
+    //     firebase.database().ref('users/' + userId).set({
+    //       username: name,
+    //       email: email,
+    //       profile_picture : imageUrl
+    //     });
+    //   }
+
+    
+    document.getElementById('databtn').onclick = function insertData(){
+        console.log("clicked...");
+        var optn1 = document.getElementById('optn1').innerHTML;
+        var optn2 = document.getElementById('optn2').innerHTML;
+        var optn3 = document.getElementById('optn3').innerHTML;
+        var optn4 = document.getElementById('optn4').innerHTML;
+        
+        var perc1 = document.getElementById('perc1').innerHTML;
+        var perc2 = document.getElementById('perc2').innerHTML;
+        var perc3 = document.getElementById('perc3').innerHTML;
+        var perc4 = document.getElementById('perc4').innerHTML;
+        
+        var ques = document.getElementById('ques').innerHTML;
+        firebase.database().ref('users/xyz').set({
+            
+            Question : ques,
+            Option1: optn1,
+            Option2: optn2,
+            Option3: optn3,
+            Option4: optn4,
+            Percentage1:perc1,
+            Percentage2:perc2,
+            Percentage3:perc3,
+            Percentage4:perc4
+        })
+        .then(()=>{
+            alert("data stored successfully")
+            location.href="/ShowResults.html";
+        })
+        .catch((error)=>{
+            alert("unsuccessful,error "+error);
+        });
+    }
+    
+

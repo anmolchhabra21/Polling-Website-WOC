@@ -29,7 +29,7 @@
     <div class="contentBx" style=" width: 70%; margin:auto;">
         <div class="formBx" style="background-image:linear-gradient(135deg,rgb(44, 135, 233),#82b1ff) ; padding: 1rem; border-radius: 2rem; margin-top: 1.5rem; ">
 
-            <h2 style=" width: 100%; text-align: center;font-size: 2.5rem; border-bottom: 10px rgb(0, 174, 255) solid;margin-bottom: 0rem;">AFTER POLL</h2>
+            <h2 style=" width: 100%; text-align: center;font-size: 2.5rem; border-bottom: 10px rgb(0, 174, 255) solid;margin-bottom: 0rem;">YOUR DATA WILL BE STORED HERE</h2>
             <form id="form" style="font-size: 1.7rem;padding: 2rem 2rem 0rem 2rem;">
                 <div class="inputBx" style="margin:20px 0px">
                     <span style="color: black; display: block;">Question:</span>
@@ -39,29 +39,26 @@
                 <div class="inputBx" style="margin:20px 0px">
                     <span style="color: black;">Option 1</span>
                     
-                    <span><button type="button" onclick="fun1(),trigger()">Choose This</button></span>&nbsp&nbsp<span id="optn1">0</span>&nbsp&nbsp &<span style="color: white;"> The Percentage is: </span><span id="perc1">0</span>
+                    <span><button type="button" onclick="fun1(),trigger()">Choose This</button></span>&nbsp&nbsp<span id="optn1">0</span>&nbsp&nbsp <span style="color: white; display: none;">& The Percentage is: </span><span id="perc1" style="display:none" >0</span>
                 </div>
                 
                 <div class="inputBx" style="margin:20px 0px">
                     <span style="color: black;">Option 2</span>
                     
-                    <span><button type="button" onclick="fun2(),trigger()">Choose This</button></span>&nbsp&nbsp<span id="optn2">0</span>&nbsp&nbsp &<span style="color: white;"> The Percentage is: </span> <span id="perc2">0</span>
+                    <span><button type="button" onclick="fun2(),trigger()">Choose This</button></span>&nbsp&nbsp<span id="optn2">0</span>&nbsp&nbsp <span style="color: white;display: none;">& The Percentage is: </span> <span id="perc2" style="display:none" >0</span>
                 </div>
                 
                 <div class="inputBx" style="margin:20px 0px">
                     <span style="color: black; ">Option 3</span>
                     
-                    <span><button type="button" onclick="fun3(),trigger()">Choose This</button></span>&nbsp&nbsp<span id="optn3">0</span>&nbsp&nbsp&<span style="color: white;"> The Percentage is: </span> <span id="perc3">0</span>
+                    <span><button type="button" onclick="fun3(),trigger()">Choose This</button></span>&nbsp&nbsp<span id="optn3">0</span>&nbsp&nbsp<span style="color: white;display: none;">& The Percentage is: </span> <span id="perc3" style="display:none" >0</span>
                 </div>
 
                 <div class="inputBx" style="margin:20px 0px">
                     <span style="color: black; ">Option 4</span>
                     
-                    <span><button type="button" onclick="fun4(),trigger()">Choose This</button></span>&nbsp&nbsp<span id="optn4">0</span>&nbsp&nbsp&<span style="color: white;"> The Percentage is: </span> <span id="perc4">0</span>
+                    <span><button type="button" onclick="fun4(),trigger()">Choose This</button></span>&nbsp&nbsp<span id="optn4">0</span>&nbsp&nbsp<span style="color: white;display: none;">& The Percentage is: </span> <span id="perc4" style="display:none" >0</span>
                 </div>
-
-               <div>
-                   <button type="button" id="databtn">Submit </button>
                </div>
 
                 <div class="inputBx">
@@ -96,6 +93,26 @@
       Copyright © 1999-2022 Momentive
     </div>
 </div>     
+<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-database.js"></script>
+
+<script type="module">
+    // const firebaseConfig = {
+    // apiKey: "AIzaSyBsaTnuNS-A-H30Sd-oz6M0D7qSjyFoYfI",
+    // authDomain: "pollingwebsite-a8305.firebaseapp.com",
+    // databaseURL: "https://pollingwebsite-a8305-default-rtdb.firebaseio.com",
+    // projectId: "pollingwebsite-a8305",
+    // storageBucket: "pollingwebsite-a8305.appspot.com",
+    // messagingSenderId: "1036692593631",
+    // appId: "1:1036692593631:web:ed939e8e54bc2a15b1426a"};
+
+    // firebase.initializeApp(firebaseConfig);
+    // const auth = firebase.auth();
+    // var db= firebase.database();
+
+</script>
     
 <script src="PollFunc.js"></script>
+<script src="ShowResults.js"></script>
 <!-- <script type="module" src="PollResult.js"></script> -->
